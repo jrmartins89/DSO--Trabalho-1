@@ -1,22 +1,22 @@
 from MVC.model.usuario import Usuario
 from MVC.view.tela_usuario import TelaUsuario
+
 class ControladorUsuario:
-  def __init__(self, controlador_biblioteca):
-    #if isinstance (controlador_biblioteca, ControladorBiblioteca): 
+  def __init__(self, controlador_biblioteca: ControladorBiblioteca):
+    if isinstance (controlador_biblioteca, ControladorBiblioteca):
       self.__controlador_biblioteca = controlador_biblioteca
       self.__tela = TelaUsuario(self)
       self.__usuarios = []
 
   def abre_tela(self):
-    #evocaco do método do menu criado na classe de tela 
-    [opcao, nome, email, id_usuario] = self.__tela.tela_opcoes()
-    
-    if opcao == 1:
-      self.incluir_usuario(nome, email, id_usuario)
+    [opcao] = self.__tela.tela_opcoes()
+
+     if opcao == 1:
+      self.incluir_usuario(nome: str, email: str, id_usuario: str)
     elif opcao == 2:
-      self.excluir_usuario(id_usuario)
-    elif opcao == 3: 
-      self.lista_usuarios()
+      self.excluir_usuario(id_usuario: str)
+    elif opcao == 3:
+      self.listar_usuarios()
 
     # essa função serve para instanciar um objeto usuario e colocar na lista de usuarios
   def incluir_usuario(self, nome: str, email: str, id_usuario: str):
