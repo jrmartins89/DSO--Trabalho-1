@@ -1,6 +1,6 @@
 from tela import Tela
 
-Class TelaAquisicao(Tela):
+class TelaAquisicao(Tela):
 
 def __init__(self, controlador):
     self.__controlador = controlador

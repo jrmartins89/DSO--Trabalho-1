@@ -17,72 +17,64 @@ class Jogo:
         return self.__genero
 
     @genero.setter
-    def genero(self, genero: str):
-        if isinstance(genero, str):
-            self.__genero = genero
+    def genero(self, novo_genero):
+        self.__genero = novo_genero
 
     @property
     def nome(self):
         return self.__nome
 
     @nome.setter
-    def nome(self, nome: str):
-        if isinstance(nome, str):
-            self.__nome = nome
+    def nome(self, novo_nome):
+        self.__nome = novo_nome
 
     @property
     def ano_lancamento(self):
         return self.__ano_lancamento
 
     @ano_lancamento.setter
-    def ano_lancamento(self, ano_lancamento: int):
-        if isinstance(ano_lancamento, int):
-            self.__ano_lancamento = ano_lancamento
+    def ano_lancamento(self, novo_ano_lancamento):
+        self.__ano_lancamento = novo_ano_lancamento
 
     @property
     def horas_jogadas(self):
         return self.__horas_jogadas
 
     @horas_jogadas.setter
-    def horas_jogadas(self, horas_jogadas: int):
-        if isinstance(horas_jogadas, int):
-            self.__horas_jogadas = horas_jogadas
+    def horas_jogadas(self, novas_horas_jogadas: int):
+        self.__horas_jogadas = novas_horas_jogadas
 
     @property
     def preco(self):
         return self.__preco
 
     @preco.setter
-    def preco(self, preco: float):
-        if isinstance(preco, float):
-            self.__preco = preco
+    def preco(self, novo_preco):
+        self.__preco = novo_preco
 
     @property
     def total_trofeus(self):
         return self.__total_trofeus
 
     @total_trofeus.setter
-    def total_trofeus(self, total_trofeus: int):
-        if isinstance(total_trofeus, float):
-            self.__total_trofeus = total_trofeus
+    def total_trofeus(self, novo_total_trofeus):
+        self.__total_trofeus = novo_total_trofeus
 
     @property
     def finalizado(self):
         return self.__finalizado
 
     @finalizado.setter
-    def finalizado(self, finalizado: bool):
-        if isinstance(finalizado, bool):
-            self.__finalizado = finalizado
+    def finalizado(self, novo_finalizado):
+        self.__finalizado = novo_finalizado
 
     @property
     def multiplayer(self):
         return self.__multiplayer
 
     @multiplayer.setter
-    def multiplayer(self, multiplayer: bool):
-        if isinstance(multiplayer, bool):
-            self.__multiplayer = multiplayer
+    def multiplayer(self, novo_multiplayer):
+        self.__multiplayer = novo_multiplayer
 
     @property
     def jogos(self):

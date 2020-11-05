@@ -12,18 +12,25 @@ class Usuario:
             return self.__nome
 
         @nome.setter
-        def nome(self, nome: str):
-            if isinstance(nome, str):
-                self.__nome = nome
+        def nome(self, novo_nome):
+                self.__nome = novo_nome
 
         @property
         def email(self):
             return self.__email
 
         @email.setter
-        def email(self, email: str):
-            if isinstance(nome, str):
-                self.__email = email
+        def email(self, novo_email):
+            self.__email = novo_email
+
+        @property
+        def id_usuario(self):
+            return id_usuario
+
+        @id_usuario.setter
+        def id_usuario(self, novo_id):
+            self.__id_usuario = novo_id
+
 
         @property
         def aquisicoes(self):
