@@ -1,4 +1,4 @@
-from tela import Tela
+from MVC.View.tela import Tela
 
 class TelaAquisicao(Tela):
 

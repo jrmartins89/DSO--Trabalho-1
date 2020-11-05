@@ -1,22 +1,22 @@
-from MVC.model.jogo import Jogo
+from MVC.Model.jogo import Jogo
 from MVC.View.tela_jogo import TelaJogo
 
 class ControladorJogo:
-  def __init__(self, controlador_biblioteca: ControladorBiblioteca):
-    if isinstance (controlador_biblioteca, ControladorBiblioteca):
+  def __init__(self, controlador_biblioteca):
+    if isinstance (controlador_biblioteca):
       self.__controlador_biblioteca = controlador_biblioteca
       self.__tela = TelaJogo(self)
       self.__jogos = []
 
-  def abre_tela(self):
-    [opcao] = self.__tela.tela_opcoes()
+    def abre_tela(self):
+      [opcao] = self.__tela.tela_opcoes()
 
-    if opcao == 1:
-      self.incluir_jogo(genero: str, nome: str, ano_lancamento: int, horas_jogadas: int, total_trofeus: int, trofeus_acumulados: int, jogo_finalizado: bool, multiplayer: bool, preco: float)
-    elif opcao == 2:
-      self.excluir_jogo(nome: str)
-    elif opcao == 3:
-      self.listar_jogos()
+      if opcao == 1:
+        self.incluir_jogo(genero: str, nome: str, ano_lancamento: int, horas_jogadas: int, total_trofeus: int, trofeus_acumulados: int, jogo_finalizado: bool, multiplayer: bool, preco: float)
+        elif opcao == 2:
+        self.excluir_jogo(nome: str)
+        elif opcao == 3:
+        self.listar_jogos()
 
     # essa função serve para instanciar um objeto jogo e colocar na lista de jogos
   def incluir_jogo(self, genero: str, nome: str, ano_lancamento: int, horas_jogadas: int, total_trofeus: int, trofeus_acumulados: int, jogo_finalizado: bool, multiplayer: bool, preco: float):
