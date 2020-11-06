@@ -12,8 +12,8 @@ class TelaAquisicao(Tela):
   def tela_opcoes(self):
     print("Bem vindo a Biblioteca Gamer!")
     print("Escolha uma opção:")
-    print("1: efetuar aquisição")
-    print("2: listar aquisições")
+    print("1: Efetuar aquisição")
+    print("2: Listar aquisições")
     opcao = int(input("Escolha a opção: "))
     id_usuario = None
     nome = None
